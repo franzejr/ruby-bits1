@@ -69,3 +69,31 @@ def new_game(name, year = nil, system = nil)
 end
 game = new_game("Street Figher II")
 ```
+
+##### Hash Arguments
+
+Before
+
+```ruby
+def new_game(name, year=nil, system=nil)
+  {
+    name: name,
+    year: year,
+    system: system
+  }
+end
+game = new_game("Street Figher II", "SNES", 1992)
+```
+
+After
+```
+def new_game(name, options = {})
+  {
+    name: name,
+    year: options[:year],
+    system: options[:system]
+  }
+end
+
+game = new_game("Street Figher II",year: 1992,system:"SNES")
+```
