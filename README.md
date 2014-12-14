@@ -145,3 +145,26 @@ end
 [https://endofline.wordpress.com/2011/01/21/the-strange-ruby-splat/]
 
 
+Before
+
+```ruby
+def describe_favorites(games)
+  for game in games
+    puts "Favorite Game: #{game}"
+  end  
+end
+describe_favorites(['Mario', 'Contra', 'Metroid'])
+```
+
+After
+
+```ruby
+def describe_favorites(*games)
+  for game in games
+    puts "Favorite Game: #{game}"
+  end  
+end
+
+describe_favorites('Mario', 'Contra', 'Metroid')
+```
+
