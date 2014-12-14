@@ -138,3 +138,10 @@ rescue InvalidGameError => e
   puts "There was a problem creating your new game: #{e.message}"
 end
 ```
+
+
+##### Splat Operator
+
+[https://endofline.wordpress.com/2011/01/21/the-strange-ruby-splat/]
+
+
