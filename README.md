@@ -245,3 +245,14 @@ end
 
 Game.find_all_from_user("Gregg")
 ```
+
+
+##### Object extend
+[http://www.railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/]
+[http://stackoverflow.com/a/5008349/1311732]
+
+```ruby
+game = Game.new("Contra")
+game.extend(Playable)
+game.play
+```
