@@ -231,3 +231,17 @@ luigi_favorite = {
 
 puts difference_between(mario_favorite, luigi_favorite)
 ```
+
+
+
+##### Creating class methods for a module
+
+```ruby
+class Game
+  class << self
+  include GameUtils
+  end
+end
+
+Game.find_all_from_user("Gregg")
+```
